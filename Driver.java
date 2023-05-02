@@ -9,8 +9,8 @@ import java.io.PrintWriter;
 public class Driver {
 
     //generates the house for the user
-    public static AdventureMap generateHouse() {
-        AdventureMap mainMap = new AdventureMap();
+    public static HouseMap generateHouse() {
+        HouseMap mainMap = new HouseMap();
 
         Room exitRoom = new Room("Exit", "The exit to the house. Theres nothing remarkable here, but theres a door with a small key hole and a comically large key hole");
         exitRoom.addExit("Kitchen");
@@ -72,8 +72,8 @@ public class Driver {
     }
 
     //places the two items in the map
-    public static AdventureMap placeItems(Random rand, String[] roomNames) {
-        AdventureMap mainMap = generateHouse();
+    public static HouseMap placeItems(Random rand, String[] roomNames) {
+        HouseMap mainMap = generateHouse();
         Item[] gameItems = generateItems();
         int randNum1 = rand.nextInt(6);
         int randNum2 = rand.nextInt(6);
@@ -88,7 +88,7 @@ public class Driver {
     }
 
     //outputs the exits and gets next input
-    public static String getExits(String userInput, Scanner scnr, AdventureMap mainMap, String[] roomNames) {
+    public static String getExits(String userInput, Scanner scnr, HouseMap mainMap, String[] roomNames) {
         Boolean validInput = false;
         while (!validInput) {
             System.out.println("Please choose an exit");
@@ -189,7 +189,7 @@ public class Driver {
         roomNames[6] = "Entrance";
         roomNames[7] = "Exit";
 
-        AdventureMap mainMap = placeItems(rand, roomNames);
+        HouseMap mainMap = placeItems(rand, roomNames);
         Inventory playerInventory = new Inventory();
 
 
