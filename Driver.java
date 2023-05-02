@@ -65,7 +65,7 @@ public class Driver {
         Item smallKey = new Item("A small key", "Its a small key...\nIt must be used to open something.");
         gameItems[0] = smallKey;
 
-        Item paper = new Item("A scap of paper", "Its a small piece of paper...\nIt looks like it says 'chEfRE'\nWhat does it mean?");
+        Item paper = new Item("A scap of paper", "Its a small piece of paper...\nIt looks like it says 'eakrnsDs'\nWhat does it mean?");
         gameItems[1] = paper;
 
         return gameItems;
